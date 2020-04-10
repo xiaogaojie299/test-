@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h6 id="h6">10秒后关闭窗口</h6>
+        <a id="a1" href="javascript:;">启动</a>
+        <a id="a2" href="javascript:;">停止</a>
+    </div>
+    <script>
+        var s=10;
+        var time=null;
+        a1.onclick=function(){
+        if(time==null){
+        time=setInterval(function(){
+            s--;
+            h6.innerHTML=`${s}秒后关闭窗口`;
+        },1000)
+    }
+};
+    a2.onclick=function(){
+        clearInterval(time);
+        time=null;
+    }
+    </script>
+</body>
+</html>

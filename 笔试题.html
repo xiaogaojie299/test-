@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //         function fun(n,o) {
+      //             console.log(o)
+      //         return {
+      //             fun:function(m){
+      //             return fun(m,n);
+      //         }
+      //   };
+      // }
+      // var a = fun(0);
+      //     a.fun(1);   //0
+      //     a.fun(2);   //0
+      //     a.fun(3);   //0
+      //     var b = fun(0).fun(1).fun(2).fun(3);
+      //     var c = fun(0).fun(1);//undifind,1
+      //     c.fun(2);//1
+      //     c.fun(3);//1
+
+      //100
+      //  2.请随机生成指定数字范围的数组，数组元素不可重复，并进行排序(排序不使用API)
+      //     function arr1(e){
+      //     var arr=[];
+      //     for(var i=0;i<e;i++){
+      //     arr.push(parseInt(Math.random()*e));
+      //     //console.log(a);
+      //     // if(arr[i]>arr[i+1]){
+      //     //         arr[i+1]=arr[i];
+      //     //     }
+      //     }
+      //     //return arr;
+      // }
+      //     arr1(100);
+
+      // var arr=[];
+      // for(var i=0;i<10;i++){
+      //     for(var j=0;j<i;j++){
+      //         arr.push(parseInt(Math.random()*20))
+      //         if(arr[i]==arr[j]&&arr[i]>arr[j]){
+      //             arr[i]=arr[j];
+      //         }
+      //     }
+      //     }
+      var arr = new Array(5);
+      for (var i = 0; i < 5; i++) {
+        arr[i] = parseInt(Math.random() * 10);
+        if (i > 0) {
+          for (var j = 0; j < i; j++) {
+            if (arr[j] == arr[i] && arr[j] < arr[i]) {
+              i--;
+              break;
+            }
+          }
+        }
+      }
+      console.log(arr);
+    </script>
+  </body>
+</html>
